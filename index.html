@@ -5,98 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Contador</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        box-sizing: border-box;
-    }
-    h1 {
-        font-size: 50px; 
-        color: #0f2b44;
-        
-    }
-    body {
-        min-height: 100vh;
-        background: black;
-        color: white; /* Cor padrão para o body, mas o JS vai sobrescrever no 'p' */
-        display: grid;
-        place-items: center;
-    }
+<link rel="stylesheet" href="style.css">
 
-    section {
-        background: rgb(238, 185, 39);
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-        text-shadow: black 2px 2px 3px;
-    }
-    p {
-        font-size: 110px;
-        /* A cor inicial pode ser definida aqui, mas o JS vai gerenciar depois */
-        color: white; /* Define uma cor inicial para o texto do contador */
-        text-shadow: black 2px 2px 2px;
-    }
-
-    /* Opcional: Adicionar algum estilo aos botões */
-    button {
-        padding: 10px 20px;
-        margin: 0 10px;
-        font-size: 1em;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #3a4249; /* Azul padrão */
-        color: white;
-        transition: background-color 0.2s ease;
-        box-shadow: black 2px 2px 5px;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-</style>
 <body>
     <section>
         <h1> Contador</h1>
         <p id="resultado">0</p> <button onclick="diminuir()"> menos</button>
         <button onclick="aumentar()"> mais</button>
     </section>
-    <script>
-        // estado da minha aplicação
-        let numero = 0
-
-        // alteradores de estado da aplicação
-        function aumentar() {
-            numero++; // Uso de operador de incremento, mais conciso
-            mostrarNaTela();
-        }
-
-        function diminuir() {
-            numero--; // Uso de operador de decremento, mais conciso
-            mostrarNaTela();
-        }
-
-        // jogar o estado de aplicação na tela
-        function mostrarNaTela() {
-            const p = document.querySelector("#resultado"); // Selecionando pelo ID
-
-            // --- AQUI ESTÁ A LÓGICA DAS CORES ---
-            if (numero > 0) {
-                p.style.color = "gray"; // Cinza para números positivos
-            } else if (numero < 0) {
-                p.style.color = "red"; // Vermelho para números negativos
-            } else {
-                p.style.color = "white"; // Branco para o zero (ou a cor que preferir)
-            }
-            // --- FIM DA LÓGICA DAS CORES ---
-
-            p.innerText = numero; // Atualiza o texto com o número
-        }
-
-        // iniciar o contador com a cor correta (caso o valor inicial seja diferente de 0)
-        mostrarNaTela();
-    </script>
-
+    <script src="script.js"></script>
+   
 </body>
 </html>

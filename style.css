@@ -1,0 +1,49 @@
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 50px; 
+        color: #0f2b44;
+        
+    }
+    body {
+        min-height: 100vh;
+        background: black;
+        color: white; /* Cor padrão para o body, mas o JS vai sobrescrever no 'p' */
+        display: grid;
+        place-items: center;
+    }
+
+    section {
+        background: rgb(238, 185, 39);
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        text-shadow: black 2px 2px 3px;
+    }
+    p {
+        font-size: 110px;
+        /* A cor inicial pode ser definida aqui, mas o JS vai gerenciar depois */
+        color: white; /* Define uma cor inicial para o texto do contador */
+        text-shadow: black 2px 2px 2px;
+    }
+
+    /* Opcional: Adicionar algum estilo aos botões */
+    button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 1em;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #3a4249; /* Azul padrão */
+        color: white;
+        transition: background-color 0.2s ease;
+        box-shadow: black 2px 2px 5px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
