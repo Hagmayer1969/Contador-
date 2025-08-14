@@ -1,35 +1,29 @@
+// estado inciAL da aplicação
+let numero = 0;
 
-        // estado da minha aplicação
-        let numero = 0
+// alteradores de funcionalidade 
+function add() {
+  numero ++;
+  render();
+}
+function res() {
+numero = 0;
+  render();
+}
+function dim() {
+  numero --;
+  render();
+}
+//mostrar na tela e logica de cores 
+function render() {
+    document.querySelector("p").innerText=numero
+if (numero>10) {document.querySelector("p").style.color="blue" }
 
-        // alteradores de estado da aplicação
-        function aumentar() {
-            numero++; // Uso de operador de incremento, mais conciso
-            mostrarNaTela();
-        }
-
-        function diminuir() {
-            numero--; // Uso de operador de decremento, mais conciso
-            mostrarNaTela();
-        }
-
-        // jogar o estado de aplicação na tela
-        function mostrarNaTela() {
-            const p = document.querySelector("#resultado"); // Selecionando pelo ID
-
-            // --- AQUI ESTÁ A LÓGICA DAS CORES ---
-            if (numero > 0) {
-                p.style.color = "gray"; // Cinza para números positivos
-            } else if (numero < 0) {
-                p.style.color = "red"; // Vermelho para números negativos
-            } else {
-                p.style.color = "white"; // Branco para o zero (ou a cor que preferir)
-            }
-            // --- FIM DA LÓGICA DAS CORES ---
-
-            p.innerText = numero; // Atualiza o texto com o número
-        }
-
-        // iniciar o contador com a cor correta (caso o valor inicial seja diferente de 0)
-        mostrarNaTela();
+else if (numero<0) { document.querySelector ("p").style.color="violet"
+}
+else {
+    document.querySelector("p").style.color="white"
+}
+ }
+render()
 
