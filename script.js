@@ -17,7 +17,7 @@ function dim() {
 //mostrar na tela e logica de cores 
 function render() {
     document.querySelector("p").innerText=numero
-if (numero>10) {document.querySelector("p").style.color="blue" }
+if (numero>0) {document.querySelector("p").style.color="blue" }
 
 else if (numero<0) { document.querySelector ("p").style.color="violet"
 }
